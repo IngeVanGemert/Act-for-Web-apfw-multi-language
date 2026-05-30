@@ -1,0 +1,67 @@
+Install either the English, French or German version of Act! for Web selfhosted.
+for ecample from https://www.act.com/de/download/download-act-v27/
+unzip but do not install (You have already installed Act for Web, right)
+Look for a file in the installation folder called Act.Web.Framework.resources.dll for that language
+
+copy that file into C:\Program Files\ACT\Act for Web\APFW\bin\de\Act.Web.Framework.resources.dll
+
+Make sure you use the exact same version from your own installation located a "C:\Program Files\ACT\Act for Web\APFW\bin\Act.Web.Framework.dll" .
+
+Open web.config  in notepad
+oOok for naar glob
+Edit in
+  <globalization culture="de" uiCulture="de" requestEncoding="utf-8" responseEncoding="utf-8" />
+reset iis
+
+
+this will change your installation into German
+If you want to have an option to switch between languages:
+You need a separate application pool for each language.
+You need to make a copy of the full APFW folder for each language, for example so youget:
+C:\Program Files\ACT\Act for Web\APFW
+C:\Program Files\ACT\Act for Web\APFWDE
+C:\Program Files\ACT\Act for Web\APFWFR
+with all the files inside that filder. 
+
+The German version will have the German language file in the folder:
+C:\Program Files\ACT\Act for Web\APFWDE\bin\de\Act.Web.Framework.resources.dll
+
+The French version will have the French language file in the folder:
+C:\Program Files\ACT\Act for Web\APFWFR\bin\fr\Act.Web.Framework.resources.dll
+
+
+
+You need to create an application pool for each language and a website for each language in IIS under default website
+
+
+Then add the language switcher into the main index file:
+Add this to the top of default.aspx:
+<!--taal-->
+<script runat="server">
+  protected void selectLanguage_SelectedIndexChanged(object sender, EventArgs e)
+    {
+ InitializeCulture();     
+   System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.CreateSpecificCulture(selectLanguage.SelectedValue);
+    }
+</script>
+<!--EINDE taal-->
+
+
+and then add this to where you want your drop down language selector to be probably above the database dropdown:
+
+
+
+<!--taal verwijzing-->
+<div>
+<label for="ddlDatabaseSelector" id="lblLanguage" style="font-weight:bold;">Language:</label>
+
+<asp:DropDownList runat="server" AutoPostBack="true" ID="selectLanguage" OnSelectedIndexChanged="selectLanguage_SelectedIndexChanged">
+            <asp:ListItem Text="English" Value="en-IE"></asp:ListItem>
+            <asp:ListItem Text="German" Value="de" selected></asp:ListItem>
+German
+        </asp:DropDownList>
+</div>
+<!--EINDE taal verwijzing-->
+
+
+ 
