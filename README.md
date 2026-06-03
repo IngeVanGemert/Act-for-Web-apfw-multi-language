@@ -1,18 +1,24 @@
 Install either the English, French or German version of Act! for Web selfhosted.
 for ecample from https://www.act.com/de/download/download-act-v27/
 unzip but do not install (You have already installed Act for Web, right)
-Look for a file in the installation folder called Act.Web.Framework.resources.dll for that language
 
-copy that file into C:\Program Files\ACT\Act for Web\APFW\bin\de\Act.Web.Framework.resources.dll
+in the installation wizard click browse media
+
+<img width="602" height="450" alt="image" src="https://github.com/user-attachments/assets/b617d6a0-ab3a-4cdc-b26e-bbe2862903fc" />
+
+Look for a file in the installation folder called C:\Act!_Web_v24sp0x204\ACTForWeb\program files 64\ACT\ActInstallDir\APFW\bin\DE-DE\Act.Web.Framework.resources.dll for that language
+
+copy that file into C:\Program Files\ACT\Act for Web\APFW\bin\de\
 
 Make sure you use the exact same version from your own installation located a "C:\Program Files\ACT\Act for Web\APFW\bin\Act.Web.Framework.dll" .
 
 Open web.config  in notepad
-oOok for naar glob
-Edit in
+Look for the word 'glob'
+Edit:
   <globalization culture="de" uiCulture="de" requestEncoding="utf-8" responseEncoding="utf-8" />
 reset iis
 
+go to youw web installation and it should now be in German!
 
 this will change your installation into German
 If you want to have an option to switch between languages:
