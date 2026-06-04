@@ -1,5 +1,17 @@
-Install either the English, French or German version of Act! for Web selfhosted.
-for ecample from https://www.act.com/de/download/download-act-v27/
+First check that you have an active working installation of Apfw. I have installed Act Premium for Web v24:
+<img width="455" height="516" alt="image" src="https://github.com/user-attachments/assets/c08be936-8d0d-4a01-9263-7ef98256baf4" />
+
+
+your starting point can be  either the English, French or German version of Act! for Web selfhosted.
+
+
+# step 1 make APFWDE
+make a copy of the APFW folder under your installation C:\Program Files\ACT\Act for Web\APFW and call it APFWDE 
+under that folder go to \bin\  and create a folder called \de\
+
+
+# step 2 get localized file
+for ecample from https://www.act.com/de/download/download-act-v24/
 unzip but do not install (You have already installed Act for Web, right)
 
 in the installation wizard click browse media
