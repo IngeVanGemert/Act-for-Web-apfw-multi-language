@@ -24,6 +24,8 @@ copy that file into C:\Program Files\ACT\Act for Web\APFWDE\bin\de\
 
 Make sure you use the exact same version from your own installation located a "C:\Program Files\ACT\Act for Web\APFW\bin\Act.Web.Framework.dll" .
 # step 3 create website in iis
+<img width="888" height="475" alt="image" src="https://github.com/user-attachments/assets/fbe061e9-caef-4a5d-a9ba-57c7440b1940" />
+
 Open web.config  in notepad
 Look for the word 'glob'
 Edit:
