@@ -20,15 +20,17 @@ in the installation wizard click browse media
 
 Look for a file in the installation folder called C:\Act!_Web_v24sp0x204\ACTForWeb\program files 64\ACT\ActInstallDir\APFW\bin\DE-DE\Act.Web.Framework.resources.dll for that language
 
-copy that file into C:\Program Files\ACT\Act for Web\APFW\bin\de\
+copy that file into C:\Program Files\ACT\Act for Web\APFWDE\bin\de\
 
 Make sure you use the exact same version from your own installation located a "C:\Program Files\ACT\Act for Web\APFW\bin\Act.Web.Framework.dll" .
-
+# step 3 create website in iis
 Open web.config  in notepad
 Look for the word 'glob'
 Edit:
   <globalization culture="de" uiCulture="de" requestEncoding="utf-8" responseEncoding="utf-8" />
 reset iis
+
+as alternative in iis go to globalization and change the language to German (de)
 
 go to youw web installation and it should now be in German!
 
