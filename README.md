@@ -26,15 +26,32 @@ Make sure you use the exact same version from your own installation located a "C
 # step 3 create website in iis
 <img width="888" height="475" alt="image" src="https://github.com/user-attachments/assets/fbe061e9-caef-4a5d-a9ba-57c7440b1940" />
 
+make sure you pint to the new folder
+set the authorisation / impersonation correct and test the connection
+
+<img width="696" height="481" alt="image" src="https://github.com/user-attachments/assets/09977a9d-b258-4622-9639-2a198dc51afc" />
+# step 4 select language
+in iis in globalization choose German (de)
+<img width="1171" height="321" alt="image" src="https://github.com/user-attachments/assets/71fcc26b-7151-4202-9fca-12f352d3e530" />
+
+as alternative you can:
 Open web.config  in notepad
 Look for the word 'glob'
 Edit:
   <globalization culture="de" uiCulture="de" requestEncoding="utf-8" responseEncoding="utf-8" />
 reset iis
 
-as alternative in iis go to globalization and change the language to German (de)
+# step 5 test
 
 go to youw web installation and it should now be in German!
+<img width="497" height="520" alt="image" src="https://github.com/user-attachments/assets/b48811bc-00c1-44f1-a667-9efaf5fc5af7" />
+
+ # step 6 add database 
+ In Act! go to tools - website administration and add database to this website
+ 
+ <img width="411" height="485" alt="image" src="https://github.com/user-attachments/assets/3009ec3e-e853-4222-8d89-e502a7c032d2" />
+you should now be able to login and see german
+# step 7 add dropdown list of languages
 
 this will change your installation into German
 If you want to have an option to switch between languages:
