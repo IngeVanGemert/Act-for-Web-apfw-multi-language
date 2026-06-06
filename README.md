@@ -53,7 +53,7 @@ Go to youw web installation and it should now be in German! https://yourhost/apf
 <img width="497" height="520" alt="image" src="https://github.com/user-attachments/assets/b48811bc-00c1-44f1-a667-9efaf5fc5af7" />
 
 # step 6 add database 
-In Act! go to tools - website administration and add database to this website
+In Act! go to tools - website administration and add database to this website  
 <img width="411" height="485" alt="image" src="https://github.com/user-attachments/assets/3009ec3e-e853-4222-8d89-e502a7c032d2" />
 You should now be able to login on the website and see German
 
@@ -83,7 +83,8 @@ Add this to default.aspx:
 
 
 and then add this to where you want your drop down language selector to be probably above the database dropdown:
-```		<div class="cent space">
+```
+<div class="cent space">
   <asp:DropDownList ID="ddlLanguages" runat="server" CssClass="act-input" 
     onchange="if (this.value) window.location.href=this.value;">
     <asp:ListItem Text="-- Select a Language --" Value="" />
@@ -91,16 +92,8 @@ and then add this to where you want your drop down language selector to be proba
     <asp:ListItem Text="German" Value="https://mysite.nl/apfwde" />
     <asp:ListItem Text="French" Value="https://mysite.nl/apfwfr" />
   </asp:DropDownList>
-         <div class="cent space">```
+         </div>
+```
 
-	    <div class="cent space">
- <asp:DropDownList ID="ddlLanguages" runat="server" CssClass="act-input" 
-    onchange="if (this.value) window.location.href=this.value;">
-    <asp:ListItem Text="-- Select a Language --" Value="" />
-	<asp:ListItem Text="English" Value="https://myhost/apfw" />
-    <asp:ListItem Text="German" Value="https://myhost/apfwde" />
-    <asp:ListItem Text="French" Value="https://myhost/apfwfr" />
-</asp:DropDownList>
-    <div class="cent space">
 
 <img width="436" height="560" alt="image" src="https://github.com/user-attachments/assets/08d13d3f-850b-4358-975d-a7ba46b7a17a" />
