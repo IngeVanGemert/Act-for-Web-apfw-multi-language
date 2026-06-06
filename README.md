@@ -1,4 +1,4 @@
-# Installation of Act! Premium For Web APFW localized in different languages German Franch and English
+# Installation of Act! Premium For Web APFW localized in different languages German French and English
 First check that you have an active working installation of Apfw. I have installed Act Premium for Web v24:
 <img width="455" height="516" alt="image" src="https://github.com/user-attachments/assets/c08be936-8d0d-4a01-9263-7ef98256baf4" />
 
