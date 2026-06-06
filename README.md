@@ -78,31 +78,20 @@ You need to create a website for each language in IIS under default website
 
 
 Then add the language switcher into the main index file:
-Add this to the top of default.aspx:
-<!--taal-->
-<script runat="server">
-  protected void selectLanguage_SelectedIndexChanged(object sender, EventArgs e)
-    {
- InitializeCulture();     
-   System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.CreateSpecificCulture(selectLanguage.SelectedValue);
-    }
-</script>
-<!--EINDE taal-->
+Add this to default.aspx:
+<img width="983" height="232" alt="image" src="https://github.com/user-attachments/assets/3ee76e4b-8310-4cd3-af0b-5339a30e5b17" />
+
 
 
 and then add this to where you want your drop down language selector to be probably above the database dropdown:
 
+	    <div class="cent space">
+<asp:DropDownList ID="WebsiteDropdown" runat="asp:AutoPostBack" AutoPostBack="true" OnSelectedIndexChanged="WebsiteDropdown_SelectedIndexChanged">
+    <asp:ListItem Text="-- Select a Language --" Value="" />
+	<asp:ListItem Text="English" Value="https://myhost/apfw" />
+    <asp:ListItem Text="German" Value="https://myhost/apfwde" />
+    <asp:ListItem Text="French" Value="https://myhost/apfwfr" />
+</asp:DropDownList>
+    <div class="cent space">
 
-
-<!--taal verwijzing-->
-<div>
-<label for="ddlDatabaseSelector" id="lblLanguage" style="font-weight:bold;">Language:</label>
-
-<asp:DropDownList runat="server" AutoPostBack="true" ID="selectLanguage" OnSelectedIndexChanged="selectLanguage_SelectedIndexChanged">
-            <asp:ListItem Text="English" Value="en-IE"></asp:ListItem>
-            <asp:ListItem Text="German" Value="de" selected></asp:ListItem>
-German
-        </asp:DropDownList>
-</div>
-<!--EINDE taal verwijzing-->
-
+<img width="436" height="560" alt="image" src="https://github.com/user-attachments/assets/08d13d3f-850b-4358-975d-a7ba46b7a17a" />
