@@ -79,11 +79,19 @@ You need to create a website for each language in IIS under default website
 
 Then add the language switcher into the main index file in each of the apfw folders.
 Add this to default.aspx:
-<img width="983" height="232" alt="image" src="https://github.com/user-attachments/assets/3ee76e4b-8310-4cd3-af0b-5339a30e5b17" />
-
+<img width="1064" height="371" alt="image" src="https://github.com/user-attachments/assets/dc594bb4-531f-4df6-90d2-d3903812e018" />
 
 
 and then add this to where you want your drop down language selector to be probably above the database dropdown:
+```		<div class="cent space">
+  <asp:DropDownList ID="ddlLanguages" runat="server" CssClass="act-input" 
+    onchange="if (this.value) window.location.href=this.value;">
+    <asp:ListItem Text="-- Select a Language --" Value="" />
+    <asp:ListItem Text="English" Value="https://mysite.nl/apfw" />
+    <asp:ListItem Text="German" Value="https://mysite.nl/apfwde" />
+    <asp:ListItem Text="French" Value="https://mysite.nl/apfwfr" />
+  </asp:DropDownList>
+         <div class="cent space">```
 
 	    <div class="cent space">
  <asp:DropDownList ID="ddlLanguages" runat="server" CssClass="act-input" 
